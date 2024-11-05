@@ -213,7 +213,7 @@ $config = null;
 try {
     // TODO: Check config correctness
     $config = require $configPath;
-} catch (Exception $err) {
+} catch (\Exception $err) {
     echo "Could not load the configuration file: " . $err->getMessage() . "\n";
     exit(1);
 }
