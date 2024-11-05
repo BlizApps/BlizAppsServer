@@ -1,0 +1,16 @@
+{
+    "name": "blizapps/blizappsserver",
+    "type": "project",
+    "license": "MIT",
+    "description": "Software of Minecraft Bedrock Edition",
+
+    "require": {
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.5"
+    },
+    "autoload": {
+        "psr-4": "BlizApps\\": "src"
+    }
+}
