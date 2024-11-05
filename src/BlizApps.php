@@ -7,20 +7,20 @@ use Events\EventEmitter;
 use TaskTimer\TaskTimer;
 use BlizApps\BinaryStream;
 use BlizApps\Logger;
-use BlizApps\RakNet\NetEvents;
-use BlizApps\RakNet\NetworkSession;
-use BlizApps\RakNet\RakServer;
-use BlizApps\Block\BlockManager;
+use BlizApps\raknet\NetEvents;
+use BlizApps\raknet\NetworkSession;
+use BlizApps\raknet\RakServer;
+use BlizApps\block\BlockManager;
 use BlizApps\Config;
 use BlizApps\Encryption;
-use BlizApps\Entity\EntityPlayer;
-use BlizApps\Network\Minecraft\Internal\DataPacket;
-use BlizApps\Network\Minecraft\PlayerListEntry;
-use BlizApps\Network\PacketRegistry;
-use BlizApps\Network\PlayerConnection;
-use BlizApps\Resources\ResourceManager;
-use BlizApps\World\Generator\GeneratorManager;
-use BlizApps\World\World;
+use BlizApps\entity\EntityPlayer;
+use BlizApps\network\Minecraft\Internal\DataPacket;
+use BlizApps\network\Minecraft\PlayerListEntry;
+use BlizApps\network\PacketRegistry;
+use BlizApps\network\PlayerConnection;
+use BlizApps\resources\ResourceManager;
+use BlizApps\world\Generator\GeneratorManager;
+use BlizApps\world\World;
 
 class BlizApps extends EventEmitter
 {
@@ -213,7 +213,7 @@ $config = null;
 try {
     // TODO: Check config correctness
     $config = require $configPath;
-} catch (Exception $err) {
+} catch (\Exception $err) {
     echo "Could not load the configuration file: " . $err->getMessage() . "\n";
     exit(1);
 }
