@@ -6,7 +6,7 @@ class Server{
 
   private $world = 'Only Test';
 
-  public function __construct(){
+  public function __construct($world){
     $this->world = $world;
   }
 
