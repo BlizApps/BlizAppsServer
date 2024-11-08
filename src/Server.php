@@ -4,12 +4,14 @@ namespace BlizApps;
 
 class Server{
 
+  private $world = 'Only Test';
+
   public function __construct(){
-    //NOOP
+    $this->world = $world;
   }
 
   public function getWorld() : void{
-    return $this->getWorld2();
+    return $this->world;
   }
 
   public function getWorld2() : void{
